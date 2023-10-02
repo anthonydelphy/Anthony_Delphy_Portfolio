@@ -54,14 +54,13 @@
 
     html{
     scroll-behavior: smooth;
+    background-color: #101010;
     
     }
 
     body{
         font-family: 'Jost', sans-serif;
-        font-size: var(--body-font);
-        background:  url(/assets/icons/BG.png),linear-gradient(180deg,#101010, #111821);
-        background-size: contain;
+        font-size: var(--body-font);        background-size: contain;
         background-repeat: no-repeat;
         color: var(--text-color);
         width: auto;
@@ -492,6 +491,7 @@
   .about_introduction{
     color:white;
     text-align: center;
+    padding-top: 5rem;
     margin: 1.2rem;
     font-size: 2rem;
   }
@@ -565,7 +565,7 @@
 .project_cont{
   margin-top: 1rem;
   margin-bottom: 1rem;
-
+height: 200px;
   position: relative; 
   overflow: hidden;  
 }
@@ -650,6 +650,9 @@
 }
 
 .footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
   background-color: var(--black-color);
 }
 
