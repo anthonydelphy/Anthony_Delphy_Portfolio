@@ -567,9 +567,7 @@
   margin-bottom: 1rem;
 
   position: relative; 
-  overflow: hidden;
-  height: 200px; 
-  
+  overflow: hidden;  
 }
 
 
@@ -595,14 +593,12 @@
 }
 .project_img{
   position: absolute;
-  object-fit: cover;
   filter: brightness(30%);
   transition: 0.4s;
 }
 
 .project_img:hover{
   position: absolute;
-  object-fit: cover;
   filter: brightness(10%);
   transition: 0.4s;
 
