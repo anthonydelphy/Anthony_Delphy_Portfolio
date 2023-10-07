@@ -596,6 +596,7 @@
   position: absolute;
   filter: brightness(30%);
   transition: 0.4s;
+  width: 100%;
 }
 
 .project_img:hover{
@@ -605,6 +606,9 @@
 
 }
 
+.projects_image_preview{
+
+}
 
 .projects_more{
   color: white;

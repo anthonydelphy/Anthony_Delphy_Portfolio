@@ -55,16 +55,18 @@
     html{
     scroll-behavior: smooth;
     background-color: #101010;
-    
+    height: 100%;
+
     }
 
     body{
         font-family: 'Jost', sans-serif;
-        font-size: var(--body-font);        background-size: contain;
+        font-size: var(--body-font);        
+        background:linear-gradient(180deg,#101010, #111821);
+        background-size:cover;
         background-repeat: no-repeat;
         color: var(--text-color);
-        width: auto;
-        margin: auto;
+        height: 100%;
     }
 
     a{
@@ -492,7 +494,7 @@
     color:white;
     text-align: center;
     padding-top: 5rem;
-    margin: 1.2rem;
+    margin: 2rem;
     font-size: 2rem;
   }
 
@@ -584,6 +586,7 @@
 
 }
 
+
 .project_text{
   font-weight: var(--font-medium);
   position: relative;
@@ -595,6 +598,9 @@
   position: absolute;
   filter: brightness(30%);
   transition: 0.4s;
+  max-width: none;
+  width: 100%;
+  
 }
 
 .project_img:hover{
@@ -650,7 +656,7 @@
 }
 
 .footer {
-    position: relative;
+    position: absolute;
     bottom: 0;
     width: 100%;
   background-color: var(--black-color);
