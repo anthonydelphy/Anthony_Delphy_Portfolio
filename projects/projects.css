@@ -150,11 +150,12 @@
   top: -5px;
 }
 
-.main {
-  overflow: hidden; /* For animation ScrollReveal */
-  height: auto;
-  align-content: center;
 
+main {
+  overflow: hidden; /* For animation ScrollReveal */
+  margin:0;
+  height: 100%;
+  align-content: center;
 }
     /*== Header & Nav ==*/
     
