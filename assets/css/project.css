@@ -186,8 +186,8 @@
   display: flex;
 }
 .project_image{
-  max-width: 80%;
-
+  max-width: 30%;
+  min-width: 250px;
   position: relative;
   text-align: center;
   margin: 1rem;
@@ -195,7 +195,8 @@
 
 .project_image_grid{
   text-align: center;
-  max-width: 40%;
+  max-width: 25%;
+  min-width: 125px;
 }
 
 .project_text{
