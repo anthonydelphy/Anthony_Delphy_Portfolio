@@ -379,27 +379,23 @@
         margin: 1.2rem;
         font-size: 1.5rem;
       }
-    
+
+
+
       .home_button{
+        display: flex;
         width: 100px;
         height: 45px;
-      }
-
-      .home_button{margin: 1rem;
-        margin-bottom: 1rem;
+        margin: auto;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
         background-color: #313D7B;
         font-family: 'Jost', sans-serif;
-        font-weight: var(--font-medium);
-
         color: white;
-        border: none;
-        border-radius: 10%;
+        border-radius: 10px;
+        font-weight: 100;
       }
-    .home_button_holder{
-        text-align: center;
-        align-items: center;
-        position:relative;
-    }
     
     
 .about{
