@@ -6,7 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content= "width=device-width, user-scalable=no">
 
-    
+    <!-- JQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+      $(function() {
+          $("#navigation").load("../nav.html");
+          $("#footer").load("../footer.html");
+      });
+    </script>
+
     <!-- Stylesheets + Icons -->
     <link rel="stylesheet" href="assets/css/stylesheet.css">
     <script src="https://kit.fontawesome.com/81a75f1311.js" crossorigin="anonymous"></script>
@@ -19,51 +27,8 @@
 
 
   <body>
-    <header class="header" id="header">
-        <nav class="nav container">
-            <a href="" class="nav_logo">
-              <span class="nav_logo-name"><b>Anthony Delphy</b></span>
-              <i class="fa-regular fa-face-smile"></i>
-            </a>
-
-            <div class="nav_menu" id="nav-menu">
-              <span class="nav_title">Menu</span>
-
-              <h3 class="nav_name">Anthony</h3>
-
-            
-              <ul class="nav_list">
-                <li class="nav_item">
-                  <a href="#about" class="nav_link" id="nav_link_about">About</a>
-                </li>
-     
-           
-                <li class="nav_item">
-                  <a href="/projects/index.html" class="nav_link">Projects</a>
-                </li>
-              
-                <li class="nav_item">
-                  <a href="#contact" class="nav_link">Contact</a>
-                </li>
-              </ul>
-  
-            <div class="nav_close" id="nav-close">
-                  <i class="fa-solid fa-xmark"></i> 
-            </div>
-  
+    <div id="navigation"></div>
     
-            </div>
-            
-            <div class="nav_buttons">
-              <div class="nav_toggle" id="nav-toggle">
-                <i class="fa-solid fa-bars"></i>
-              </div>
-          </div>
-
-           
-
-        </nav>
-      </header>
     <main>
         <section class="home_section" id="home">
           <div class="home_container container grid">
@@ -182,7 +147,7 @@
             <u>Projects</u>
           </h2>
           <div class="project_container container grid">
-            <a class="project_cont" href="projects/jmarsxr/index.html">
+            <a class="project_cont" href="projects/jmarsxr/">
               <img src="assets/images/SC605A_1.PNG" alt="" class="project_img">
               <div class="project">
                 <h1  class="project_text" id="projectName1">JMARS XR</h1>
@@ -190,7 +155,7 @@
               </div>              
             </a>
 
-            <a class="project_cont" href="projects/coordinate/index.html">
+            <a class="project_cont" href="projects/coordinate/">
               <img src="assets/images/CoordinatePicture.png" alt="" class="project_img">
               <div class="project">
                 <h1 class="project_text" id="projectName1">Coordinate</h1>
@@ -199,7 +164,7 @@
             </a>
 
             <div class="projects_more">
-              <a style="color: white" href="projects/index.html">See More</a>
+              <a style="color: white" href="projects/">See More</a>
               <i class="fa-solid fa-arrow-right"></i>
 
      
@@ -223,41 +188,15 @@
         </section>
 
         <section class="Work_section" id="contact">      
-          <h1 class="about_introduction">
-            <u>Contact</u>
-          </h1>
-          <p style="font-size:larger; color: white; text-align: center;">For inqueries and questions, please contact me at:</p>
-          <p style="font-size:larger; color: white; text-align: center;padding-bottom: 2rem;">anthony@anthonydelphy.com</p>
-
-
-      
-          </div> 
+            <h1 class="about_introduction">
+              <u>Contact</u>
+            </h1>
+            <p style="font-size:larger; color: white; text-align: center;">For inqueries and questions, please contact me at:</p>
+            <p style="font-size:larger; color: white; text-align: center;padding-bottom: 2rem;">anthony@anthonydelphy.com</p>
         </section>
 
-        
-    <!--==================== FOOTER ====================-->
-    <footer class="footer">
-      <div class="footer__container container ">
-        <ul class="footer_links">
-            <li>
-              <a href="#home" class="footer_link">Home</a>
-            </li>
-
-            <li>
-              <a href="#about" class="footer_link">About</a>
-            </li>
-
-            <li>
-              <a href="#projects" class="footer_link">Projects</a>
-            </li>
-        </ul>
-
-        <p  style="color: white;"class="footer__copy">
-            &#169;
-            <a style="color: white;">Anthony Delphy 2023</a>
-        </p>
-      </div>
-    </footer>
+    <!-- Footer -->
+    <div id="footer"></div>
 
     </main>
     <script src="main.js"></script>
