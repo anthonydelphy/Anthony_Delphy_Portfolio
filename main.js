@@ -13,9 +13,7 @@ if(navToggle){
     })
 }
 
-
-
-  /*==== SHOW MENU ====*/
+  /*==== CLOSE MENU ====*/
 if(navClose){
     navClose.addEventListener('click', () =>{
         navMenu.classList.remove("show-menu");
