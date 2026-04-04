@@ -23,6 +23,19 @@ if(navClose){
     })
 }
 
+/*==== EXPERIENCE TABS ====*/
+const experienceTabs = document.querySelectorAll('.experience_tab');
+const experiencePanels = document.querySelectorAll('.experience_panel');
 
-  
+experienceTabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+        experienceTabs.forEach(t => t.classList.remove('experience_tab--active'));
+        experiencePanels.forEach(p => p.classList.remove('experience_panel--active'));
+
+        tab.classList.add('experience_tab--active');
+        document.querySelector(`.experience_panel[data-panel="${tab.dataset.tab}"]`)
+            .classList.add('experience_panel--active');
+    });
+});
+
   
