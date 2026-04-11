@@ -54,19 +54,18 @@
 
     html{
     scroll-behavior: smooth;
-    
+    background: #101010;
+    transition: background 0.4s ease;
     }
 
     body{
         font-family: 'Inter', 'Jost', sans-serif;
         font-size: var(--body-font);
-        background:  url(/assets/icons/BG.png),linear-gradient(180deg,#101010, #111821);
-        background-size: contain;
-        background-repeat: no-repeat;
+        background: transparent;
         color: var(--text-color);
         width: auto;
         margin: auto;
-        transition: background 0.4s ease, color 0.4s ease;
+        transition: color 0.4s ease;
     }
 
     a{
@@ -586,19 +585,41 @@
 }
 
 .proficiencies_icons {
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
+  gap: 0.5rem;
   margin: 1rem;
-  display:grid;
-  grid-template-columns: repeat(5, 1fr);
-  height: fit-content; 
 }
 
-.proficiencies_icon{
-  height: 25px;
-  width: 25px;
-  justify-content: center;
-  justify-self: center;
-  margin: 1rem;
+.proficiencies_pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.3rem 0.85rem;
+  border-radius: 9999px;
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: var(--title-color);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  cursor: default;
+  user-select: none;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.proficiencies_pill:hover {
+  background: rgba(255, 255, 255, 0.16);
+  border-color: rgba(255, 255, 255, 0.22);
+}
+
+body.light .proficiencies_pill {
+  background: rgba(0, 0, 0, 0.06);
+  border-color: rgba(0, 0, 0, 0.1);
+}
+
+body.light .proficiencies_pill:hover {
+  background: rgba(0, 0, 0, 0.13);
+  border-color: rgba(0, 0, 0, 0.18);
 }
 
 .projects_section{
@@ -866,6 +887,8 @@
 
 .footer {
   background-color: var(--black-color);
+  position: relative;
+  z-index: 2;
 }
 
  /* For tablet devices */
@@ -1005,14 +1028,6 @@
       margin:2rem;
     }
 
-    .proficiencies_icon{
-      height: 50px;
-      width: 50px;
-      justify-content: center;
-      justify-self: center;
-      margin: 1rem;
-      height: fit-content;
-    }
 
     
   .company_icon{
@@ -1115,25 +1130,126 @@
     }
   }
 
-/*=== Mouse-follow gradient ===*/
-#bg-gradient {
+/*=== Lava Lamp Background ===*/
+.blob {
   position: fixed;
-  inset: 0;
+  border-radius: 50%;
+  filter: blur(90px);
+  mix-blend-mode: screen;
   pointer-events: none;
-  background: linear-gradient(
-    135deg,
-    #f72585, #b5179e, #7209b7, #560bad,
-    #480ca8, #3a0ca3, #3f37c9, #4361ee,
-    #4895ef, #4cc9f0
-  );
-  opacity: 0.03;
-  z-index: 0;
+  will-change: transform;
+  z-index: -1;
 }
 
-body.light #bg-gradient {
+.blob-1 {
+  width: 55vw;
+  height: 55vw;
+  background: radial-gradient(circle at center, #f72585 0%, #b5179e 40%, transparent 70%);
+  top: -15vw;
+  left: -5vw;
+  opacity: 0.09;
+  animation: blob-float-1 28s ease-in-out infinite;
+}
+.blob-2 {
+  width: 50vw;
+  height: 50vw;
+  background: radial-gradient(circle at center, #7209b7 0%, #560bad 40%, transparent 70%);
+  bottom: -10vw;
+  right: -5vw;
+  opacity: 0.08;
+  animation: blob-float-2 35s ease-in-out infinite;
+  animation-delay: -7s;
+}
+.blob-3 {
+  width: 50vw;
+  height: 50vw;
+  background: radial-gradient(circle at center, #3a0ca3 0%, #3f37c9 40%, transparent 70%);
+  top: 20vh;
+  left: 25vw;
+  opacity: 0.07;
+  animation: blob-float-3 22s ease-in-out infinite;
+  animation-delay: -12s;
+}
+.blob-4 {
+  width: 45vw;
+  height: 45vw;
+  background: radial-gradient(circle at center, #4361ee 0%, #4895ef 40%, transparent 70%);
+  top: 5vh;
+  right: 0;
+  opacity: 0.08;
+  animation: blob-float-4 30s ease-in-out infinite;
+  animation-delay: -5s;
+}
+.blob-5 {
+  width: 40vw;
+  height: 40vw;
+  background: radial-gradient(circle at center, #4cc9f0 0%, #4895ef 40%, transparent 70%);
+  bottom: 5vh;
+  left: 5vw;
+  opacity: 0.07;
+  animation: blob-float-5 25s ease-in-out infinite;
+  animation-delay: -18s;
+}
+.blob-6 {
+  width: 45vw;
+  height: 45vw;
+  background: radial-gradient(circle at center, #b5179e 0%, #7209b7 40%, transparent 70%);
+  top: 45vh;
+  right: 20vw;
   opacity: 0.06;
+  animation: blob-float-6 32s ease-in-out infinite;
+  animation-delay: -3s;
 }
 
+@keyframes blob-float-1 {
+  0%   { transform: translate(0,    0)    scale(1);    }
+  20%  { transform: translate(8vw,  12vh) scale(1.06); }
+  40%  { transform: translate(4vw,  22vh) scale(0.94); }
+  60%  { transform: translate(14vw, 8vh)  scale(1.05); }
+  80%  { transform: translate(6vw,  4vh)  scale(0.97); }
+  100% { transform: translate(0,    0)    scale(1);    }
+}
+@keyframes blob-float-2 {
+  0%   { transform: translate(0,     0)     scale(1);    }
+  25%  { transform: translate(-10vw, -12vh) scale(1.07); }
+  50%  { transform: translate(-4vw,  -20vh) scale(0.93); }
+  75%  { transform: translate(-14vw, -6vh)  scale(1.04); }
+  100% { transform: translate(0,     0)     scale(1);    }
+}
+@keyframes blob-float-3 {
+  0%   { transform: translate(0,    0)    scale(1);    }
+  33%  { transform: translate(-6vw, 14vh) scale(1.08); }
+  66%  { transform: translate(10vw, -6vh) scale(0.92); }
+  100% { transform: translate(0,    0)    scale(1);    }
+}
+@keyframes blob-float-4 {
+  0%   { transform: translate(0,     0)    scale(1);    }
+  30%  { transform: translate(-12vw, 12vh) scale(1.05); }
+  60%  { transform: translate(-6vw,  22vh) scale(0.95); }
+  100% { transform: translate(0,     0)    scale(1);    }
+}
+@keyframes blob-float-5 {
+  0%   { transform: translate(0,    0)     scale(1);    }
+  40%  { transform: translate(10vw, -16vh) scale(1.07); }
+  80%  { transform: translate(4vw,  -8vh)  scale(0.94); }
+  100% { transform: translate(0,    0)     scale(1);    }
+}
+@keyframes blob-float-6 {
+  0%   { transform: translate(0,    0)     scale(1);    }
+  35%  { transform: translate(-8vw, -14vh) scale(1.05); }
+  70%  { transform: translate(6vw,  -22vh) scale(0.96); }
+  100% { transform: translate(0,    0)     scale(1);    }
+}
+
+body.light .blob { mix-blend-mode: multiply; }
+body.light .blob-1 { opacity: 0.2;  }
+body.light .blob-2 { opacity: 0.18; }
+body.light .blob-3 { opacity: 0.15; }
+body.light .blob-4 { opacity: 0.2;  }
+body.light .blob-5 { opacity: 0.18; }
+body.light .blob-6 { opacity: 0.15; }
+
+/*=== Mouse-follow gradient ===*/
 #gradient {
   position: fixed;
   width: 345px;
@@ -1197,8 +1313,12 @@ body.light .dark-toggle svg {
 .footer__copy a { color: white; }
 
 /*=== Light mode overrides ===*/
+html.light {
+  background: #f0f0f2;
+}
+
 body.light {
-  background: #f0f0f2 !important;
+  background: transparent !important;
   --title-color: #1a1a1c;
   --text-color: #4a4a4c;
   --text-color-light-mode: #6a6a6c;

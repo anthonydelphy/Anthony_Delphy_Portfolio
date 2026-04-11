@@ -56,6 +56,7 @@ const sunPath  = `
 // Restore saved mode before first paint
 if (localStorage.getItem('theme') === 'light') {
   document.body.classList.add('light');
+  document.documentElement.classList.add('light');
   if (darkIcon) darkIcon.innerHTML = sunPath;
   if (darkToggle) darkToggle.setAttribute('aria-label', 'Switch to dark mode');
 }
@@ -63,6 +64,7 @@ if (localStorage.getItem('theme') === 'light') {
 if (darkToggle) {
   darkToggle.addEventListener('click', () => {
     document.body.classList.toggle('light');
+    document.documentElement.classList.toggle('light');
     const isLight = document.body.classList.contains('light');
     darkIcon.innerHTML = isLight ? sunPath : moonPath;
     darkToggle.setAttribute('aria-label', isLight ? 'Switch to dark mode' : 'Switch to light mode');
