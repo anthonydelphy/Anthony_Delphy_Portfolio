@@ -1,5 +1,5 @@
 /*== Google Fonts ==*/
-@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,400;0,500;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400&family=Jost:ital,wght@0,400;0,500;1,400&display=swap');
 
 
 
@@ -27,8 +27,8 @@
     --z-tooltop:10;
     --z-fixed: 100;
         /*== Weights ==*/
-        --font-regular: 400;
-        --font-medium: 500;
+        --font-regular: 300;
+        --font-medium: 400;
 
     /*== Dynamic Typography ==*/
     @media screen and (min-width: 1024px) {
@@ -59,14 +59,15 @@
     }
 
     body{
-        font-family: 'Jost', sans-serif;
-        font-size: var(--body-font);        
+        font-family: 'Inter', 'Jost', sans-serif;
+        font-size: var(--body-font);
         background: linear-gradient(180deg,#101010, #111821);
         background-size: contain;
         background-repeat: no-repeat;
         color: var(--text-color);
         width: auto;
         margin: auto;
+        transition: background 0.4s ease, color 0.4s ease;
     }
 
     a{
@@ -350,6 +351,9 @@
 
     .nav_buttons{
         color: white;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
     }
 
 
@@ -964,3 +968,121 @@
       margin: 1rem;
     }
   }
+
+/*=== Mouse-follow gradient ===*/
+#bg-gradient {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(
+    135deg,
+    #f72585, #b5179e, #7209b7, #560bad,
+    #480ca8, #3a0ca3, #3f37c9, #4361ee,
+    #4895ef, #4cc9f0
+  );
+  opacity: 0.03;
+  z-index: 0;
+}
+
+body.light #bg-gradient { opacity: 0.06; }
+
+#gradient {
+  position: fixed;
+  width: 345px;
+  height: 345px;
+  pointer-events: none;
+  left: 0;
+  top: 0;
+  transform: translate(-50%, -50%) rotate(0deg);
+  border-radius: 50%;
+  background: conic-gradient(
+    from 0deg,
+    #f72585, #b5179e, #7209b7, #560bad,
+    #480ca8, #3a0ca3, #3f37c9, #4361ee,
+    #4895ef, #4cc9f0, #f72585
+  );
+  filter: blur(65px);
+  opacity: 0.55;
+  mix-blend-mode: screen;
+  transition: opacity 0.4s ease;
+  z-index: 1;
+}
+
+body.light #gradient {
+  mix-blend-mode: multiply;
+  opacity: 0.45;
+}
+
+@media (max-width: 600px) {
+  #gradient { width: 240px; height: 240px; filter: blur(50px); }
+}
+
+/*=== Dark mode toggle ===*/
+.dark-toggle {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.dark-toggle svg {
+  width: 22px;
+  height: 22px;
+  stroke: var(--white-color);
+  fill: none;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: stroke 0.4s ease, transform 0.3s ease;
+}
+
+.dark-toggle:hover svg { transform: rotate(-15deg); }
+
+body.light .dark-toggle svg { stroke: #1a1a1c; }
+
+/* Dark mode base rules */
+.footer__copy,
+.footer__copy a { color: white; }
+
+/*=== Light mode overrides ===*/
+body.light {
+  background: #f0f0f2 !important;
+  --title-color: #1a1a1c;
+  --text-color: #4a4a4c;
+  --text-color-light-mode: #6a6a6c;
+}
+
+body.light .header {
+  background-color: rgba(240, 240, 242, 0.92);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+body.light .nav_menu {
+  background-color: hsla(0, 0%, 94%, 0.92);
+}
+
+body.light .nav_buttons { color: #1a1a1c; }
+
+body.light .nav_title,
+body.light .nav_name,
+body.light .nav_close,
+body.light .nav_link,
+body.light .nav_logo,
+body.light .nav_logo-name {
+  color: #1a1a1c;
+}
+
+body.light .project_banner_text,
+body.light .project_text {
+  color: #1a1a1c !important;
+}
+
+body.light .footer {
+  background-color: #e0e0e2;
+}
+
+body.light .footer_link,
+body.light .footer_links,
+body.light .footer__copy,
+body.light .footer__copy a {
+  color: #1a1a1c !important;
+}

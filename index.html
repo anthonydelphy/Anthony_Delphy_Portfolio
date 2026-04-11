@@ -27,6 +27,9 @@
 
 
   <body>
+    <div id="bg-gradient"></div>
+    <div id="gradient"></div>
+
     <header class="header" id="header">
       <nav class="nav container">
           <a href="../" class="nav_logo">
@@ -59,6 +62,11 @@
           </div>
           
           <div class="nav_buttons">
+            <div class="dark-toggle" id="dark-toggle" aria-label="Toggle dark/light mode">
+              <svg id="dark-icon" viewBox="0 0 24 24">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+              </svg>
+            </div>
             <div class="nav_toggle" id="nav-toggle">
               <i class="fa-solid fa-bars"></i>
             </div>
@@ -107,7 +115,65 @@
             <a href="assets/Delphy_Resume_SWE-3.pdf" class="home_button">Résumé</a>
 
           </div>
-         
+
+        </section>
+
+        <section class="experience_section" id="experience">
+          <h1 class="about_introduction">
+            <u>Experience</u>
+          </h1>
+
+          <div class="experience_container container">
+            <div class="experience_tabs" role="tablist" aria-label="Job experience tabs">
+              <button class="experience_tab active" role="tab" aria-selected="true" aria-controls="tab-curaleaf" data-tab="curaleaf">Curaleaf</button>
+              <button class="experience_tab" role="tab" aria-selected="false" aria-controls="tab-dnc" data-tab="dnc">DNC</button>
+              <button class="experience_tab" role="tab" aria-selected="false" aria-controls="tab-asu" data-tab="asu">ASU</button>
+            </div>
+
+            <div class="experience_panels">
+              <div class="experience_panel active" id="tab-curaleaf" role="tabpanel" data-panel="curaleaf">
+                <h3 class="experience_role">Role at Curaleaf</h3>
+                <p class="experience_meta">Company &middot; Date Range</p>
+                <p class="experience_description">
+                  Generic placeholder description for Anthony's work at Curaleaf. This will
+                  later be replaced with specific responsibilities, projects, and achievements.
+                </p>
+                <ul class="experience_bullets">
+                  <li>Placeholder responsibility or accomplishment.</li>
+                  <li>Placeholder responsibility or accomplishment.</li>
+                  <li>Placeholder responsibility or accomplishment.</li>
+                </ul>
+              </div>
+
+              <div class="experience_panel" id="tab-dnc" role="tabpanel" data-panel="dnc" hidden>
+                <h3 class="experience_role">Role at DNC</h3>
+                <p class="experience_meta">Company &middot; Date Range</p>
+                <p class="experience_description">
+                  Generic placeholder description for Anthony's work at the DNC. This will
+                  later be replaced with specific responsibilities, projects, and achievements.
+                </p>
+                <ul class="experience_bullets">
+                  <li>Placeholder responsibility or accomplishment.</li>
+                  <li>Placeholder responsibility or accomplishment.</li>
+                  <li>Placeholder responsibility or accomplishment.</li>
+                </ul>
+              </div>
+
+              <div class="experience_panel" id="tab-asu" role="tabpanel" data-panel="asu" hidden>
+                <h3 class="experience_role">Role at ASU</h3>
+                <p class="experience_meta">Company &middot; Date Range</p>
+                <p class="experience_description">
+                  Generic placeholder description for Anthony's work at ASU. This will
+                  later be replaced with specific responsibilities, projects, and achievements.
+                </p>
+                <ul class="experience_bullets">
+                  <li>Placeholder responsibility or accomplishment.</li>
+                  <li>Placeholder responsibility or accomplishment.</li>
+                  <li>Placeholder responsibility or accomplishment.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </section>
 
         <section class="about_section" id="about">      
@@ -212,7 +278,7 @@
           </div>
        </section>
 
-       <section class="Work_section" id="home">      
+       <section class="Work_section" id="home">
           <h1 class="about_introduction">
             <u>Proudly Worked With</u>
           </h1>
@@ -223,16 +289,16 @@
             <img src="assets/icons/Logos/asu-seeklogo.com.svg" alt="" class="company_icon">
             <img style="width: 50px"src="assets/icons/Logos/LF.png" alt="" class="company_icon">
 
-      
-          </div> 
+
+          </div>
         </section>
 
         <section class="Work_section" id="contact">      
             <h1 class="about_introduction">
               <u>Contact</u>
             </h1>
-            <p style="font-size:larger; color: white; text-align: center;">For inqueries and questions, please contact me at:</p>
-            <p style="font-size:larger; color: white; text-align: center;padding-bottom: 2rem;">anthony@anthonydelphy.com</p>
+            <p style="font-size:larger; text-align: center;">For inqueries and questions, please contact me at:</p>
+            <p style="font-size:larger; text-align: center;padding-bottom: 2rem;">anthony@anthonydelphy.com</p>
         </section>
 
     <!-- Footer -->
