@@ -48,7 +48,7 @@
               </li>
             
               <li class="nav_item">
-                <a href="../#contact" class="nav_link">Contact</a>
+                <a href="/contact/" class="nav_link">Contact</a>
               </li>
             </ul>
   
@@ -76,41 +76,96 @@
   </header>
 
     <main>
-        <section class="projects_section" id="home">      
+        <section class="projects_section" id="home">
             <h2 class="about_introduction">
               <u>Projects</u>
             </h2>
+
+            <div class="filter_pills container">
+              <button class="filter_pill active" data-filter="all">All</button>
+              <button class="filter_pill" data-filter="front-end">Front-End</button>
+              <button class="filter_pill" data-filter="back-end">Back-End</button>
+              <button class="filter_pill" data-filter="vfx">VFX</button>
+              <button class="filter_pill" data-filter="design">Design</button>
+              <button class="filter_pill" data-filter="data">Data</button>
+              <button class="filter_pill" data-filter="vr">VR</button>
+            </div>
+
             <div class="project_container container grid">
-              <a class="project_cont" href="../projects/jmarsxr/">
+              <a class="project_cont" href="../projects/election/" data-categories="back-end data">
+                <img src="../assets/images/election1.jpeg" alt="" class="project_img">
+                <div class="project">
+                  <h1  class="project_text" id="projectName1">Deputy Data Director - 2024 DNC Election</h1>
+                  <p class="project_text" id="projectDescription1">Automated Data Pipelines for Campaign Events</p>
+                  <div class="card_category_pills">
+                    <span class="card_category_pill">Back-End</span>
+                    <span class="card_category_pill">Data</span>
+                  </div>
+                </div>
+              </a>
+
+              <a class="project_cont" href="../projects/thunderex/" data-categories="front-endback-end design">
+                <img src="../assets/images/thunderex3.png" alt="Thunderex Project Image" class="project_img">
+                <div class="project">
+                  <h1  class="project_text" id="projectName1">Thunderex</h1>
+                  <p class="project_text" id="projectDescription1">Sole Web Development for Multinational Corporation</p>
+                  <div class="card_category_pills">
+                    <span class="card_category_pill">Back-End</span>
+                    <span class="card_category_pill">Design</span>
+                    <span class="card_category_pill">Front-End</span>
+                  </div>
+                </div>
+              </a>
+
+
+              <a class="project_cont" href="../projects/jmarsxr/" data-categories="front-end design vr">
                 <img src="../assets/images/SC605A_1.PNG" alt="" class="project_img">
                 <div class="project">
                   <h1  class="project_text" id="projectName1">JMARS XR</h1>
-                  <p class="project_text" id="projectDescription1">Extended-Reality Planetary Exploration</p>     
-                </div>              
+                  <p class="project_text" id="projectDescription1">Extended-Reality Planetary Exploration</p>
+                  <div class="card_category_pills">
+                    <span class="card_category_pill">Front-End</span>
+                    <span class="card_category_pill">Design</span>
+                    <span class="card_category_pill">VR</span>
+                  </div>
+                </div>
               </a>
 
-              <a class="project_cont" href="../projects/coordinate/">
+              <a class="project_cont" href="../projects/coordinate/" data-categories="front-end data design">
                 <img src="../assets/images/CoordinatePicture.png" alt="" class="project_img">
                 <div class="project">
                   <h1 class="project_text" id="projectName1">KER DRD & Coordinate</h1>
-                  <p class="project_text" id="projectDescription1">AR Map-Based Data Visualization </p>     
-                </div>              
+                  <p class="project_text" id="projectDescription1">AR Map-Based Data Visualization</p>
+                  <div class="card_category_pills">
+                    <span class="card_category_pill">Data</span>
+                    <span class="card_category_pill">Design</span>
+                    <span class="card_category_pill">Front-End</span>
+                  </div>
+                </div>
             </a>
 
-            <a class="project_cont" href="../projects/oakland">
+            <a class="project_cont" href="../projects/oakland" data-categories="vfx design">
               <img src="../assets/images/athletics-graphic.jpg" alt="" class="project_img">
               <div class="project">
                 <h1 class="project_text" id="projectName1">Oakland A's Scoreboard</h1>
-                <p class="project_text" id="projectDescription1">Scoreboard Visuals for Oakland A's, Mesa, and Hohokam Stadium.</p>     
-              </div>              
+                <p class="project_text" id="projectDescription1">Scoreboard Visuals for Oakland A's, Mesa, and Hohokam Stadium.</p>
+                <div class="card_category_pills">
+                  <span class="card_category_pill">Design</span>
+                  <span class="card_category_pill">VFX</span>
+                </div>
+              </div>
               </a>
-              
-              <a class="project_cont" href="../projects/meteor/">
+
+              <a class="project_cont" href="../projects/meteor/" data-categories="design front-end">
                 <img src="../assets/images/meteor_website.png" alt="" class="project_img">
                 <div class="project">
                   <h1  class="project_text" id="projectName1">Meteor Studio Website</h1>
-                  <p class="project_text" id="projectDescription1">Web Development for Public-facing Studio Website</p>     
-                </div>              
+                  <p class="project_text" id="projectDescription1">Web Development for  Studio Website</p>
+                  <div class="card_category_pills">
+                    <span class="card_category_pill">Design</span>
+                    <span class="card_category_pill">Front-End</span>
+                  </div>
+                </div>
               </a>
               
               <!--==================== In Development

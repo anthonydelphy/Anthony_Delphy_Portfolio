@@ -55,8 +55,7 @@
     html{
     scroll-behavior: smooth;
     background-color: #101010;
-    height: 100%;
-
+    min-height: 100%;
     }
 
     body{
@@ -66,7 +65,9 @@
         background-size: cover;
         background-repeat: no-repeat;
         color: var(--text-color);
-        height: fit-content;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
         transition: background 0.4s ease, color 0.4s ease;
     }
 
@@ -153,10 +154,16 @@
 
 
 main {
-  overflow: hidden; /* For animation ScrollReveal */
-  margin:0;
-  height: fit-content;
+  overflow: hidden;
+  margin: 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
   align-content: center;
+}
+
+main > section {
+  flex-grow: 1;
 }
     /*== Header & Nav ==*/
     
@@ -564,6 +571,61 @@ main {
   height: fit-content;
 
 }
+/* ===== FILTER PILLS ===== */
+.filter_pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.filter_pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.35rem 1rem;
+  border-radius: 9999px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--title-color);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  cursor: pointer;
+  user-select: none;
+  transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.filter_pill:hover {
+  background: rgba(255, 255, 255, 0.16);
+  border-color: rgba(255, 255, 255, 0.22);
+}
+
+.filter_pill.active {
+  background: rgba(255, 255, 255, 0.22);
+  border-color: rgba(255, 255, 255, 0.4);
+  font-weight: 600;
+}
+
+body.light .filter_pill {
+  background: rgba(0, 0, 0, 0.06);
+  border-color: rgba(0, 0, 0, 0.1);
+  color: #1a1a1c;
+}
+
+body.light .filter_pill:hover {
+  background: rgba(0, 0, 0, 0.13);
+  border-color: rgba(0, 0, 0, 0.18);
+}
+
+body.light .filter_pill.active {
+  background: rgba(0, 0, 0, 0.18);
+  border-color: rgba(0, 0, 0, 0.3);
+}
+
+.project_cont.hidden {
+  display: none;
+}
+
+/* ===== PROJECT GRID ===== */
 .project_container{
   display:grid;
   height: auto;
@@ -573,8 +635,10 @@ main {
   margin-top: 1rem;
   margin-bottom: 1rem;
   height: 200px;
-  position: relative; 
-  overflow: hidden;  
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px hsla(0, 0%, 0%, 0.35);
 }
 
 
@@ -588,7 +652,28 @@ main {
 
 .project_button{
   border: none;
+}
 
+.card_category_pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  margin-top: 0.5rem;
+  position: relative;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.card_category_pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.15rem 0.6rem;
+  border-radius: 9999px;
+  font-size: 0.7rem;
+  font-weight: 500;
+  color: white;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 
@@ -1015,9 +1100,12 @@ body.light .nav_logo-name {
   color: #1a1a1c;
 }
 
-body.light .about_introduction,
-body.light .project_text {
+body.light .about_introduction {
   color: #1a1a1c !important;
+}
+
+body.light .project_text {
+  color: white !important;
 }
 
 body.light .footer {

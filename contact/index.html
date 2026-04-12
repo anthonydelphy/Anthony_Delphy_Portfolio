@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+      $(function() {
+          $("#navigation").load("../nav.html");
+          $("#footer").load("../footer.html");
+      });
+    </script>
+
+    <link rel="stylesheet" href="../assets/css/project.css">
+    <script src="https://kit.fontawesome.com/81a75f1311.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="../favicon.ico" type="../assets/images/x-icon">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Contact | Anthony Delphy</title>
+  </head>
+
+  <body>
+    <div id="gradient"></div>
+
+    <header class="header" id="header">
+      <nav class="nav container">
+        <a href="../" class="nav_logo">
+          <span class="nav_logo-name"><b>Anthony Delphy</b></span>
+          <i class="fa-regular fa-face-smile"></i>
+        </a>
+
+        <div class="nav_menu" id="nav-menu">
+          <span class="nav_title">Menu</span>
+          <h3 class="nav_name">Anthony</h3>
+          <ul class="nav_list">
+            <li class="nav_item">
+              <a href="../#about" class="nav_link">About</a>
+            </li>
+            <li class="nav_item">
+              <a href="../projects/" class="nav_link">Projects</a>
+            </li>
+            <li class="nav_item">
+              <a href="../contact/" class="nav_link active-link">Contact</a>
+            </li>
+          </ul>
+          <div class="nav_close" id="nav-close">
+            <i class="fa-solid fa-xmark"></i>
+          </div>
+        </div>
+
+        <div class="nav_buttons">
+          <div class="dark-toggle" id="dark-toggle" aria-label="Toggle dark/light mode">
+            <svg id="dark-icon" viewBox="0 0 24 24">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+            </svg>
+          </div>
+          <div class="nav_toggle" id="nav-toggle">
+            <i class="fa-solid fa-bars"></i>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="contact_page_section">
+        <div class="project_card">
+
+          <div class="contact_page_hero">
+            <h1 class="contact_page_heading">Let's Connect</h1>
+            <p class="contact_page_subtext">
+              Whether you have a project in mind, a question, or just want to say hello —
+              I'd love to chat! I'm always open to new opportunities, collaborations,
+              and conversations. Fill out the form below or reach me directly at
+              <a href="mailto:anthony@anthonydelphy.com">anthony@anthonydelphy.com</a>.
+            </p>
+            <div class="contact_page_social">
+              <a href="https://github.com/anthonydelphy" class="contact_social_link" aria-label="GitHub" target="_blank" rel="noopener">
+                <i class="fa-brands fa-github"></i>
+              </a>
+              <a href="https://www.linkedin.com/in/anthony-delphy-41a6821a1/" class="contact_social_link" aria-label="LinkedIn" target="_blank" rel="noopener">
+                <i class="fa-brands fa-linkedin"></i>
+              </a>
+              <a href="mailto:anthony@anthonydelphy.com" class="contact_social_link" aria-label="Email">
+                <i class="fa-solid fa-envelope"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="contact_form_wrapper">
+            <form class="contact_form" action="/contact.php" method="POST">
+              <input type="hidden" name="_redirect" value="/contact/">
+              <div class="contact_form_row">
+                <div class="contact_form_group">
+                  <label for="first_name">First Name</label>
+                  <input type="text" id="first_name" name="first_name" placeholder="Jane" required>
+                </div>
+                <div class="contact_form_group">
+                  <label for="last_name">Last Name</label>
+                  <input type="text" id="last_name" name="last_name" placeholder="Doe" required>
+                </div>
+              </div>
+              <div class="contact_form_group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="jane@example.com" required>
+              </div>
+              <div class="contact_form_group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="Your message..." required></textarea>
+              </div>
+              <button type="submit" class="contact_form_submit">Send Message</button>
+            </form>
+          </div>
+
+        </div>
+      </section>
+
+      <div id="footer"></div>
+    </main>
+
+    <script src="../main.js"></script>
+  </body>
+</html>

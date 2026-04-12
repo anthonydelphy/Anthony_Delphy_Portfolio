@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content= "width=device-width, user-scalable=no">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+      $(function() {
+          $("#navigation").load("../../nav.html");
+          $("#footer").load("../../footer.html");
+      });
+    </script>
+
+    <!-- Stylesheets + Icons -->
+    <link rel="stylesheet" href="../../assets/css/project.css">
+    <script src="https://kit.fontawesome.com/81a75f1311.js" crossorigin="anonymous"></script>
+
+    <link rel="icon" href="./favicon.ico" type=".../assets/images/x-icon">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>2024 DNC Election | Anthony Delphy</title>
+
+  </head>
+
+  <body>
+    <div id="bg-gradient"></div>
+    <div id="gradient"></div>
+
+    <main>
+      <header class="header" id="header">
+        <nav class="nav container">
+            <a href="../" class="nav_logo">
+              <span class="nav_logo-name"><b>Anthony Delphy</b></span>
+              <i class="fa-regular fa-face-smile"></i>
+            </a>
+    
+            <div class="nav_menu" id="nav-menu">
+              <span class="nav_title">Menu</span>
+              <h3 class="nav_name">Anthony</h3>
+              <ul class="nav_list">
+                <li class="nav_item">
+                  <a href="../#about" class="nav_link" id="nav_link_about">About</a>
+                </li>
+    
+                <li class="nav_item">
+                  <a href="/projects/" class="nav_link">Projects</a>
+                </li>
+              
+                <li class="nav_item">
+                  <a href="/contact/" class="nav_link">Contact</a>
+                </li>
+              </ul>
+    
+            <div class="nav_close" id="nav-close">
+                  <i class="fa-solid fa-xmark"></i> 
+            </div>
+    
+    
+            </div>
+            
+            <div class="nav_buttons">
+              <div class="dark-toggle" id="dark-toggle" aria-label="Toggle dark/light mode">
+                <svg id="dark-icon" viewBox="0 0 24 24">
+                  <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                </svg>
+              </div>
+              <div class="nav_toggle" id="nav-toggle">
+                <i class="fa-solid fa-bars"></i>
+              </div>
+          </div>
+    
+           
+    
+        </nav>
+    </header>
+
+        <section class="election">
+          <div class="project_card">
+
+            <div class="project_banner">
+              <div class="project_banner_text">
+                <h1>Deputy Data Director - 2024 DNC Election</h1>
+                <p>Utilizing data to drive strategic decisions and enhance campaign effectiveness.</p>
+                <div class="project_category_pills">
+                  <span class="project_category_pill">Data</span>
+                  <span class="project_category_pill">Back-End</span>
+                </div>
+              </div>
+              <img src="../../assets/images/election1.jpeg" alt="" class="project_banner_image">
+            </div>
+
+
+            <p class="project_text">
+              Throughout the 2024 election season, I acted as a Deputy Data Director for the Democratic National Committee for their Arizona Coordinated Campaign.
+              This work largely focused on utilizing tools such as Votebuilder, HEX, and dbt to create actionable insights for the campaign's field organizers and leadership.
+            </p>
+
+            <div class="project_image_holder">
+              <img style="max-width: 750px; min-width: 250px; margin: 1rem;" class="project_image" src="../../assets/images/election1.jpeg" alt="">
+            </div>
+
+            <p class="project_text">
+              Near the beginning of the season, the primary focus of our team was to faciliate the data-needs for large-scale events across the state of Arizona.
+              These ranged from small meet-and-greets to large rallies with tens of thousands of attendees. For these events, I worked to create automated data-pipelines that would intake attendee and survey information to create a 
+              comprehensive post-event report that would be utilized throughout the rest of the campaign season to drive strategic decisions regarding voter outreach and engagement. 
+              This work was done utilizing a combination of SQL, Python, and dbt. This was deployed on the field for various campaign events, 
+              including a rally with Vice President Kamala Harris in Phoenix and an event in Tucson with former president Barack Obama.
+            </p>
+
+            <div class="project_image_holder">
+              <img style="max-width: 750px; min-width: 250px; margin: 1rem;" class="project_image" src="../../assets/images/election2.jpg" alt="">
+            </div>
+
+
+            <p class="project_text">
+              As the campaign season progresed, the needs of the campaign evolved. We would eventually shift our focus from large-scale events to more localized voter outreach efforts, such as canvassing and phonebanking.
+              This requires a large amount of manual work to be done to cut 'turf-maps' for our field organizers, which would be utilized to direct their outreach efforts. These turf-maps would be created utilizing VoteBuilder, 
+              a CRM used by political campaigns to manage their voter data and outreach efforts. To create turf-maps for the entire state of Arizona, I led a team of volunteers and data associates to create these turf-maps,
+              taking into account factors such as geography, voter demographics, and past voting behavior to create maps that would be utilized by our organizers while on the field.
+
+            </p>
+
+            <div class="project_image_holder">
+              <img style="max-width: 750px; min-width: 250px; margin: 1rem;" class="project_image" src="../../assets/images/turf.png" alt="">
+            </div>
+            <p class="project_text">
+              Turf being cut within NGP VoteBuilder (VAN).
+            </p>
+
+
+            <p class="project_text">
+              As our volunteers and workers were deployed to canvass and phonebank, 
+              our team needed an automatic way to utilize VoteBuilder data to build printable walk lists for our field organizers. In previous years, this process had been done manually, 
+              with organizers having to manually input data into VoteBuilder to create walk lists for their teams. This process was not only time consuming, taking upwards of a weeks worth of organizer time,
+              but also prone to human error, which could lead to volunteers being sent to the wrong locations or missing out on important voter information.
+            </p>
+
+            <p class="project_text">
+              To solve this problem, I created a piece of automation software that would organizer data and insert it into VoteBuilder, creating the walk lists automatically. 
+              This process was done utilizing a combination of SQL, Python, Selenium, and Web APIs to pull the necessary data in, transform it, and push it into VoteBuilder to create printable PDF files. 
+              This reduced a week-long, all-hands-on-deck process into a 30-minute, fully automated background process that allowed our organizers to focus on their outreach efforts rather than manual data entry. 
+              This process was utilized throughout the rest of the campaign season, allowing our field organizers to have up-to-date walk lists that they could utilize to drive their outreach efforts. 
+            </p>
+              
+
+          </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+
+    <script src="../../main.js"></script>
+  </body>
+</html>

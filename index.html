@@ -55,7 +55,7 @@
               </li>
             
               <li class="nav_item">
-                <a href="../#contact" class="nav_link">Contact</a>
+                <a href="/contact/" class="nav_link">Contact</a>
               </li>
             </ul>
   
@@ -105,7 +105,14 @@
                   <p class="home_description">
                     Full Stack Developer, UX/UI Designer, & Artist
                   </p>
-            
+
+                  <div class="typewriter_container">
+                    <span class="typewriter_static">I use technology to</span>
+                    <div class="typewriter_line">
+                      <span id="typewriter-text"></span><span class="typewriter_cursor"></span>
+                    </div>
+                  </div>
+
                   <!-- Social Media -->
                   <div class="home_social">
                     <a href="https://github.com/anthonydelphy" class="home_social_link">
@@ -132,49 +139,49 @@
             <div class="experience_tabs" role="tablist" aria-label="Job experience tabs">
               <button class="experience_tab active" role="tab" aria-selected="true" aria-controls="tab-curaleaf" data-tab="curaleaf">Curaleaf</button>
               <button class="experience_tab" role="tab" aria-selected="false" aria-controls="tab-dnc" data-tab="dnc">DNC</button>
-              <button class="experience_tab" role="tab" aria-selected="false" aria-controls="tab-asu" data-tab="asu">ASU</button>
+              <button class="experience_tab" role="tab" aria-selected="false" aria-controls="tab-meteor" data-tab="meteor">Meteor Studio</button>
+              <button class="experience_tab" role="tab" aria-selected="false" aria-controls="tab-nextlab" data-tab="nextlab">Next Lab</button>
             </div>
 
             <div class="experience_panels">
+              
               <div class="experience_panel active" id="tab-curaleaf" role="tabpanel" data-panel="curaleaf">
-                <h3 class="experience_role">Role at Curaleaf</h3>
-                <p class="experience_meta">Company &middot; Date Range</p>
-                <p class="experience_description">
-                  Generic placeholder description for Anthony's work at Curaleaf. This will
-                  later be replaced with specific responsibilities, projects, and achievements.
-                </p>
+                <h3 class="experience_role">Analytics Engineer II</h3>
+                <p class="experience_meta">Curaleaf Holdings &middot; Phoenix, AZ/Chicago, IL &middot; July 2025 – Present</p>
                 <ul class="experience_bullets">
-                  <li>Placeholder responsibility or accomplishment.</li>
-                  <li>Placeholder responsibility or accomplishment.</li>
-                  <li>Placeholder responsibility or accomplishment.</li>
+                  <li>Facilitate data-driven decision-making and strategic planning through advanced analytics and reporting in dbt and SQL.</li>
+                  <li>Built data-driven dashboards and reports (BigQuery, HEX, PyTorch, SQL) to identify key voter engagement opportunities and enhance strategy alignment.</li>
+                  <li>Collaborated in an agile environment, delivering rapid-response software solutions in response to campaign shifts and evolving priorities.</li>
                 </ul>
               </div>
 
               <div class="experience_panel" id="tab-dnc" role="tabpanel" data-panel="dnc" hidden>
-                <h3 class="experience_role">Role at DNC</h3>
-                <p class="experience_meta">Company &middot; Date Range</p>
-                <p class="experience_description">
-                  Generic placeholder description for Anthony's work at the DNC. This will
-                  later be replaced with specific responsibilities, projects, and achievements.
-                </p>
+                <h3 class="experience_role">Deputy Data Director</h3>
+                <p class="experience_meta">Democratic National Committee / AZ Coordinated &middot; Phoenix, AZ &middot; May 2024 – Nov 2024</p>
                 <ul class="experience_bullets">
-                  <li>Placeholder responsibility or accomplishment.</li>
-                  <li>Placeholder responsibility or accomplishment.</li>
-                  <li>Placeholder responsibility or accomplishment.</li>
+                  <li>Developed and deployed automation scripts (Python, SQL, RESTful APIs) to streamline real-time metrics tracking, recruitment, and resource allocation across the 2024 campaign.</li>
+                  <li>Built data-driven dashboards and reports (BigQuery, HEX, PyTorch, SQL) to identify key voter engagement opportunities and enhance strategy alignment.</li>
+                  <li>Collaborated in an agile environment, delivering rapid-response software solutions in response to campaign shifts and evolving priorities.</li>
                 </ul>
               </div>
 
-              <div class="experience_panel" id="tab-asu" role="tabpanel" data-panel="asu" hidden>
-                <h3 class="experience_role">Role at ASU</h3>
-                <p class="experience_meta">Company &middot; Date Range</p>
-                <p class="experience_description">
-                  Generic placeholder description for Anthony's work at ASU. This will
-                  later be replaced with specific responsibilities, projects, and achievements.
-                </p>
+              <div class="experience_panel" id="tab-meteor" role="tabpanel" data-panel="meteor" hidden>
+                <h3 class="experience_role">UX/UI Manager &amp; Full-Stack Engineer</h3>
+                <p class="experience_meta">Meteor Studio &middot; Tempe, AZ &middot; Jul 2022 – Dec 2023</p>
                 <ul class="experience_bullets">
-                  <li>Placeholder responsibility or accomplishment.</li>
-                  <li>Placeholder responsibility or accomplishment.</li>
-                  <li>Placeholder responsibility or accomplishment.</li>
+                  <li>Developed and maintained front-end and back-end applications using C#, Firebase, RESTful APIs, and Unity.</li>
+                  <li>Standardized UI/UX design and development frameworks for a consistent look and feel across applications.</li>
+                  <li>Produced videography and marketing materials, enhancing project storytelling and user engagement.</li>
+                </ul>
+              </div>
+
+              <div class="experience_panel" id="tab-nextlab" role="tabpanel" data-panel="nextlab" hidden>
+                <h3 class="experience_role">Front-End Software Developer</h3>
+                <p class="experience_meta">Next Lab &middot; Tempe, AZ &middot; Nov 2020 – Jul 2022</p>
+                <ul class="experience_bullets">
+                  <li>Developed Unity-based VR/AR educational applications, enhancing immersive learning experiences.</li>
+                  <li>Designed and implemented user interfaces for extended reality (XR) applications using Unity and C#.</li>
+                  <li>Integrated back-end services (Firebase, RESTful APIs) to improve application functionality and scalability.</li>
                 </ul>
               </div>
             </div>
@@ -240,9 +247,17 @@
               <div class="proficiencies_icons container">
                 <span class="proficiencies_pill">C++</span>
                 <span class="proficiencies_pill">C#</span>
+                <span class="proficiencies_pill">Python</span>
+                <span class="proficiencies_pill">Java</span>
+                <span class="proficiencies_pill">PostgreSQL</span>
+                <span class="proficiencies_pill">dbt</span>
+                <span class="proficiencies_pill">HEX</span>
+                <span class="proficiencies_pill">Omni</span>
+                <span class="proficiencies_pill">Snowflake</span>
+                <span class="proficiencies_pill">Airbyte</span>
+                <span class="proficiencies_pill">HTML/CSS</span>
                 <span class="proficiencies_pill">Unity</span>
                 <span class="proficiencies_pill">JavaScript</span>
-                <span class="proficiencies_pill">Java</span>
                 <span class="proficiencies_pill">Figma</span>
                 <span class="proficiencies_pill">Premiere Pro</span>
                 <span class="proficiencies_pill">After Effects</span>
@@ -257,6 +272,22 @@
             <u>Projects</u>
           </h2>
           <div class="project_container container grid">
+            <a class="project_cont" href="projects/thunderex/">
+              <img src="assets/images/thunderex.png" alt="Thunderex Project Image" class="project_img">
+              <div class="project">
+                <h1  class="project_text" id="projectName1">Thunderex</h1>
+                <p class="project_text" id="projectDescription1">Sole Web Development for Multinational Corporation</p>     
+              </div>              
+            </a>
+
+            <a class="project_cont" href="projects/election/">
+              <img src="assets/images/election1.jpeg" alt="Election Project Image" class="project_img">
+              <div class="project">
+                <h1  class="project_text" id="projectName1">Deputy Data Director - 2024 DNC Election</h1>
+                <p class="project_text" id="projectDescription1">Automated Data Pipelines for Campaign Events</p>     
+              </div>              
+            </a>
+
             <a class="project_cont" href="projects/jmarsxr/">
               <img src="assets/images/SC605A_1.PNG" alt="" class="project_img">
               <div class="project">
@@ -274,7 +305,7 @@
             </a>
 
             <div class="projects_more">
-              <a style="color: white" href="projects/">See More</a>
+              <a class="projects_more_link" href="projects/">See More</a>
               <i class="fa-solid fa-arrow-right"></i>
 
      
@@ -297,12 +328,38 @@
           </div>
         </section>
 
-        <section class="Work_section" id="contact">      
+        <section class="Work_section" id="contact">
             <h1 class="about_introduction">
               <u>Contact</u>
             </h1>
-            <p style="font-size:larger; text-align: center;">For inqueries and questions, please contact me at:</p>
-            <p style="font-size:larger; text-align: center;padding-bottom: 2rem;">anthony@anthonydelphy.com</p>
+            <p style="text-align: center; margin-bottom: 2.5rem;">
+              For inquiries and questions, fill out the form below or email
+              <a href="mailto:anthony@anthonydelphy.com">anthony@anthonydelphy.com</a>
+            </p>
+
+            <div class="contact_form_wrapper">
+              <form class="contact_form" action="/contact.php" method="POST">
+                <div class="contact_form_row">
+                  <div class="contact_form_group">
+                    <label for="first_name">First Name</label>
+                    <input type="text" id="first_name" name="first_name" placeholder="Jane" required>
+                  </div>
+                  <div class="contact_form_group">
+                    <label for="last_name">Last Name</label>
+                    <input type="text" id="last_name" name="last_name" placeholder="Doe" required>
+                  </div>
+                </div>
+                <div class="contact_form_group">
+                  <label for="email">Email</label>
+                  <input type="email" id="email" name="email" placeholder="jane@example.com" required>
+                </div>
+                <div class="contact_form_group">
+                  <label for="message">Message</label>
+                  <textarea id="message" name="message" placeholder="Your message..." required></textarea>
+                </div>
+                <button type="submit" class="contact_form_submit">Send Message</button>
+              </form>
+            </div>
         </section>
 
     <!-- Footer -->
