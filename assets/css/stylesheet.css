@@ -204,10 +204,9 @@
             position: fixed;
             top: -200%;
             left: 0;
-            background-color: hsla(0,0%,0%,.75);
+            background-color: var(--black-color);
             width: 100%;
             text-align: center;
-            backdrop-filter: blur(8px);
             transition: top .4s;            
         }
 
@@ -750,6 +749,9 @@ body.light .proficiencies_pill:hover {
   color: white;
   margin: 1rem;
   padding-bottom: 2rem;
+  position: relative;
+  z-index: 1;
+  isolation: isolate;
 }
 
 .experience_container{
@@ -825,7 +827,7 @@ body.light .proficiencies_pill:hover {
 }
 
 .experience_panel{
-  background-color: hsla(0, 0%, 100%, 0.08);
+  background-color: hsla(0, 0%, 0%, 0.55);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border: 1px solid hsla(0, 0%, 100%, 0.18);
@@ -910,7 +912,7 @@ body.light .proficiencies_pill:hover {
   justify-content: center;
   margin: 1rem;
   display:grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
   height: fit-content; 
 }
 
@@ -1524,12 +1526,12 @@ body.light {
 }
 
 body.light .header {
-  background-color: rgba(240, 240, 242, 0.92);
+  background-color: rgb(240, 240, 242);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 body.light .nav_menu {
-  background-color: hsla(0, 0%, 94%, 0.92);
+  background-color: rgb(240, 240, 242);
 }
 
 body.light .nav_buttons {
@@ -1571,6 +1573,12 @@ body.light .experience_tab.active {
   background-color: hsla(0, 0%, 0%, 0.05);
   color: #1a1a1c;
   border-top-color: hsla(0, 0%, 0%, 0.2);
+}
+
+body.light .experience_panel {
+  background-color: hsla(0, 0%, 100%, 0.65);
+  border-color: hsla(0, 0%, 0%, 0.1);
+  color: #1a1a1c;
 }
 
 body.light .projects_more a,
