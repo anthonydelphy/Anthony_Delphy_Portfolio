@@ -714,6 +714,9 @@ body.light .proficiencies_pill:hover {
   filter: brightness(30%);
   transition: 0.4s;
   width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 .project_img:hover{
@@ -752,6 +755,7 @@ body.light .proficiencies_pill:hover {
   position: relative;
   z-index: 1;
   isolation: isolate;
+  overflow: hidden;
 }
 
 .experience_container{
@@ -768,6 +772,12 @@ body.light .proficiencies_pill:hover {
   justify-content: flex-start;
   margin-bottom: 0;
   padding-inline: 16px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.experience_tabs::-webkit-scrollbar {
+  display: none;
 }
 
 .experience_tab{
@@ -909,18 +919,17 @@ body.light .proficiencies_pill:hover {
 }
 
 .company_icons {
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
+  gap: 1rem;
   margin: 1rem;
-  display:grid;
-  grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
-  height: fit-content; 
+  height: fit-content;
 }
 
 .company_icon{
   width: 45px;
-  justify-content: center;
-  justify-self: center;
-  margin: 1rem;
 }
 
 
