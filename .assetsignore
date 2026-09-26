@@ -1,0 +1,13 @@
+node_modules
+.git
+.wrangler
+.DS_Store
+*.env
+*.zip
+package.json
+package-lock.json
+.gitignore
+.gitattributes
+.assetsignore
+README.md
+contact.php
